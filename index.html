@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soham's page showcasing his details, projects, and contact information.">
-    <title>Soham's Tech Page</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
-        
-        body {
-            font-family: 'Fira Code', monospace;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #0D50FF;
-        }
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        nav {
-            text-align: center;
-            font-size: 18px;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-        .nav-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #0D50FF;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .sliding-text {
-            font-size: 16px;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .sliding-text span {
-            display: inline-block;
-            animation: slide 20s linear infinite;
-        }
-        @keyframes slide {
-            0% { transform: translateX(100%); }
-            30% { transform: translateX(0%); }
-            70% { transform: translateX(0%); }
-            100% { transform: translateX(-100%); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Soham's page showcasing his details, projects, and contact information.">
+<title>Soham's Tech Page</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #0D50FF;
+}
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+nav {
+    text-align: center;
+    font-size: 18px;
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0D50FF;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.sliding-text-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.sliding-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 20s linear infinite;
+}
+@keyframes slide {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.sliding-text a {
+    color: #0D50FF;
+    text-decoration: none;
+}
+.sliding-text a .hover-effect {
+    transition: all 0.3s ease;
+}
+.sliding-text a:hover .hover-effect {
+    text-decoration: underline;
+    color: #0A3CBF; /* Slightly darker shade for hover effect */
+}
+</style>
 </head>
 <body>
-    <h1>Je suis Soham</h1>
-    <nav aria-label="Main Navigation">
-        <div class="nav-links">
-            <a href="about.html">Bio</a> |
-            <a href="projects.html">Showcase</a>
-        </div>
-        <div class="nav-links">
-            <a href="contact.html">Reach Out</a> |
-            <a href="updates.html">Updates</a>
-        </div>
-    </nav>
-    <div class="sliding-text">
-        <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank">x.com/Twitter</a> for the earliest updates.</span>
+<h1>Je suis Soham</h1>
+<nav aria-label="Main Navigation">
+    <div class="nav-links">
+        <a href="about.html">Bio</a> |
+        <a href="projects.html">Showcase</a>
     </div>
+    <div class="nav-links">
+        <a href="contact.html">Reach Out</a> |
+        <a href="updates.html">Updates</a>
+    </div>
+</nav>
+<div class="sliding-text-container">
+    <div class="sliding-text">
+        <a href="https://x.com/sohamvjadhav" target="_blank">Follow on <span class="hover-effect">x.com/Twitter</span></a>
+        <span> for the earliest updates. </span>
+    </div>
+</div>
 </body>
 </html>
