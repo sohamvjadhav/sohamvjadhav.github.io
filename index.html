@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soham's tech page showcasing projects and contact information.">
+    <meta name="description" content="Soham's page showcasing his details, projects, and contact information.">
     <title>Soham's Tech Page</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
@@ -36,14 +36,38 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .sliding-text {
+            margin-top: 20px;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+        }
+        .sliding-text span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: slide 10s linear infinite;
+        }
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body>
-    <h1>>> Soham </h1>
+    <h1>Je suis Soham</h1>
     <nav aria-label="Main Navigation">
-        <a href="about.html">about me</a> |
-        <a href="projects.html">projects</a> |
-        <a href="contact.html">contact</a>
+        <a href="about.html">Bio</a> |
+        <a href="projects.html">Showcase</a> |
+        <a href="contact.html">Reach Out</a> |
+        <a href="updates.html">Updates</a>
     </nav>
+    <div class="sliding-text">
+        <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank">x.com/Twitter</a> for the earliest updates.</span>
+    </div>
 </body>
 </html>
