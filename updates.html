@@ -3,40 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updates - Soham</title>
+    <meta name="description" content="Explore my journey through a timeline of milestones and achievements.">
+    <title>My Milestones</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
-        
         body {
             font-family: 'Fira Code', monospace;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f0f0f0;
             margin: 0;
-            color: #0D50FF;
-            text-align: center;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
         }
-        .content {
+        .container {
             max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
         }
-        a {
+        h1 {
+            text-align: center;
             color: #0D50FF;
-            text-decoration: none;
+            font-size: 32px;
+            margin-bottom: 30px;
         }
-        a:hover {
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #0D50FF;
+            cursor: pointer;
+            font-weight: normal; /* Changed to normal */
+        }
+        .back-button:hover {
+            text-decoration: underline;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0 20px 60px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #0D50FF;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+        .milestone {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .milestone::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -50px;
+            background-color: white;
+            border: 4px solid #0D50FF;
+            top: 0;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .date {
+            font-weight: bold;
+            color: #0D50FF;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .year-nav {
+            position: sticky;
+            top: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+        .year-nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0D50FF;
+            font-weight: normal; /* Changed to normal */
+        }
+        .year-nav a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Updates</h1>
-        <p>Stay tuned for the latest updates on my projects and endeavors.</p>
-        <p><a href="index.html"><< Back</a></p>
+    <div class="container">
+        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        
+        <h1>My Milestones</h1>
+        
+        <div class="year-nav">
+            <a href="#2024">2024</a>
+            <!-- Add more years as needed -->
+        </div>
+
+        <div class="timeline">
+            <div class="milestone" id="2024">
+                <div class="content">
+                    <div class="date">28 June 2024</div>
+                    <p>Expanded my ML library with key books:</p>
+                    <ul>
+                        <li>"Deep Learning for Vision Systems" by Mohamed Elgendy</li>
+                        <li>"Linear Algebra and Optimization for Machine Learning" by Charu C. Aggarwal</li>
+                        <li>"The Principles of Deep Learning Theory" by Daniel A. Roberts and Sho Yaida</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="milestone">
+                <div class="content">
+                    <div class="date">2 June 2024</div>
+                    <p>Embarked on my Machine Learning journey, diving into the essential Mathematics behind it.</p>
+                </div>
+            </div>
+            <!-- Add more milestones here -->
+        </div>
     </div>
 </body>
 </html>
