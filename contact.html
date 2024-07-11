@@ -3,45 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reach Out - Soham</title>
+    <meta name="description" content="Reach out to Soham via email or social media.">
+    <title>Reach Out</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
-        
         body {
             font-family: 'Fira Code', monospace;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f0f0f0;
             margin: 0;
-            color: #0D50FF;
-            text-align: center;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
         }
-        .content {
+        .container {
             max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
         }
-        a {
+        h1 {
+            text-align: center;
+            color: #0D50FF;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #0D50FF;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .back-button:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
             color: #0D50FF;
             text-decoration: none;
         }
-        a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="container">
+        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        
         <h1>Reach Out</h1>
-        <p>Connect with me on social media or via email:</p>
-        <p>
-            <a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a><br>
-            <a href="https://x.com/sohamvjadhav" target="_blank">Twitter</a><br>
-            <a href="mailto:jadhavsoham@icloud.com">Email</a>
-        </p>
-        <p><a href="index.html"><< Back</a></p>
+        
+        <div class="content">
+            <ul class="contact-info">
+                <li><a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></li>
+                <li><a href="https://x.com/sohamvjadhav" target="_blank">Twitter</a></li>
+                <li><a href="mailto:jadhavsoham@icloud.com">jadhavsoham@icloud.com</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
