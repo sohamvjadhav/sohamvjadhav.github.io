@@ -3,40 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Soham</title>
+    <meta name="description" content="Learn more about Soham Jadhav, an interdisciplinary explorer with a keen interest in tech and ML.">
+    <title>About Me</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
-        
         body {
             font-family: 'Fira Code', monospace;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f0f0f0;
             margin: 0;
-            color: #0D50FF;
-            text-align: center;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
         }
-        .content {
+        .container {
             max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
         }
-        a {
+        h1 {
+            text-align: center;
             color: #0D50FF;
-            text-decoration: none;
+            font-size: 32px;
+            margin-bottom: 30px;
         }
-        a:hover {
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #0D50FF;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .back-button:hover {
             text-decoration: underline;
+        }
+        .content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="container">
+        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        
         <h1>About Me</h1>
-        <p>I'm Soham Jadhav, a 20-year-old interdisciplinary explorer with a keen interest in technology and machine learning. I enjoy delving into various fields to expand my knowledge and apply it in innovative ways. My passion for technology drives me to constantly learn and stay updated with the latest advancements. Through my journey, I aim to contribute significantly to the field of AI and ML, and play a role in the upcoming technological revolution.</p>
-        <p><a href="index.html"><< Back</a></p>
+        
+        <div class="content">
+            <ul>
+                <li>I'm Soham Jadhav, a 20-year-old, Interdisciplinary Explorer with a keen interest in tech and Machine Learning.</li>
+                <li>I love diving deep into complex problems and finding innovative solutions.</li>
+                <li>My journey is driven by curiosity and a passion for learning.</li>
+                <li>Besides technology, I enjoy exploring various fields and continuously expanding my knowledge base.</li>
+                <li>Whether it's through reading, hands-on projects, or engaging with the community, I'm always eager to learn and grow.</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
