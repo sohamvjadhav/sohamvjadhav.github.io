@@ -40,8 +40,12 @@
             color: #0D50FF;
         }
         .nav-links a:hover,
-        .nav-links a:active {
+        .nav-links a:active,
+        .nav-links a.visited {
             color: #31D53F;
+        }
+        .nav-links a:hover,
+        .nav-links a:active {
             text-decoration: underline;
         }
         .sliding-text-container {
@@ -63,22 +67,42 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        .sliding-text a:hover {
+        .sliding-text a:hover,
+        .sliding-text a:active,
+        .sliding-text a.visited {
             color: #31D53F;
+        }
+        .sliding-text a:hover,
+        .sliding-text a:active {
             text-decoration: underline;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('nav a');
+            var links = document.querySelectorAll('a');
+            
+            // Check localStorage and apply visited state
+            links.forEach(function(link) {
+                if (localStorage.getItem(link.href) === 'visited') {
+                    link.classList.add('visited');
+                }
+            });
+
             links.forEach(function(link) {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
                     var href = this.getAttribute('href');
-                    this.style.color = '#31D53F';
+                    
+                    // Mark as visited in localStorage
+                    localStorage.setItem(href, 'visited');
+                    
+                    // Apply visited state immediately
+                    this.classList.add('visited');
+                    
+                    // Navigate after a delay
                     setTimeout(function() {
                         window.location.href = href;
-                    }, 400); // 400ms delay
+                    }, 400);
                 });
             });
         });
