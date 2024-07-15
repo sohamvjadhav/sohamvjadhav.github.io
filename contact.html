@@ -38,33 +38,39 @@
         }
         .back-button:hover,
         .back-button:active {
-            text-decoration: none;
             color: #31D53F;
+            text-decoration: none;
         }
-        .contact-list {
-            list-style: none;
-            padding: 0;
+        .contact-links {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-        .contact-list li {
-            display: inline;
-        }
-        .contact-list a {
-            text-decoration: none;
+        .contact-links a {
             color: #0D50FF;
-            font-size: 24px;
-            transition: color 0.3s;
+            text-decoration: none;
+            transition: color 0.4s;
         }
-        .contact-list a:hover,
-        .contact-list a:active {
+        .contact-links a:hover,
+        .contact-links a:active {
             color: #31D53F;
+        }
+        .contact-links i {
+            font-size: 36px;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('.contact-list a');
+            var backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.style.color = '#31D53F';
+                setTimeout(function() {
+                    history.back();
+                }, 400); // 400ms delay
+            });
+
+            var links = document.querySelectorAll('.contact-links a');
             links.forEach(function(link) {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
@@ -72,16 +78,8 @@
                     this.style.color = '#31D53F';
                     setTimeout(function() {
                         window.location.href = href;
-                    }, 300); // 300ms delay
+                    }, 400); // 400ms delay
                 });
-            });
-            var backButton = document.querySelector('.back-button');
-            backButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                this.style.color = '#31D53F';
-                setTimeout(function() {
-                    history.back();
-                }, 300); // 300ms delay
             });
         });
     </script>
@@ -89,12 +87,15 @@
 <body>
     <div class="container">
         <a class="back-button" href="#">&lt;&lt; back</a>
+        
         <h1>Reach Out</h1>
-        <ul class="contact-list">
-            <li><a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://x.com/sohamvjadhav" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="mailto:jadhavsoham@icloud.com"><i class="fas fa-envelope"></i></a></li>
-        </ul>
+        
+        <div class="contact-links">
+            <a href="mailto:soham@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/soham" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/soham" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/soham" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </div>
 </body>
 </html>
