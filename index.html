@@ -40,9 +40,11 @@
             color: #0D50FF;
             transition: color 0.5s;
         }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
         .nav-links a:active {
             color: #31D53F;
-            transition: color 0.5s;
         }
         .sliding-text-container {
             width: 100%;
@@ -63,9 +65,8 @@
             text-decoration: underline;
             transition: color 0.5s;
         }
-        .sliding-text a:hover {
+        .sliding-text a:active {
             color: #31D53F;
-            transition: color 0.5s;
         }
     </style>
     <script>
@@ -90,7 +91,7 @@
     </nav>
     <div class="sliding-text-container">
         <div class="sliding-text">
-            <span>Follow on <a href="#" onclick="delayNavigation('https://x.com/sohamvjadhav'); return false;">x.com/Twitter</a> for the earliest updates.</span>
+            <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank">x.com/Twitter</a> for the earliest updates.</span>
         </div>
     </div>
 </body>
