@@ -37,8 +37,8 @@
         }
         .back-button:hover,
         .back-button:active {
-            text-decoration: none;
             color: #31D53F;
+            text-decoration: none;
         }
         .timeline {
             position: relative;
@@ -98,19 +98,44 @@
         }
         .year-nav a:hover,
         .year-nav a:active {
-            text-decoration: none;
             color: #31D53F;
+            text-decoration: none;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.style.color = '#31D53F';
+                setTimeout(function() {
+                    history.back();
+                }, 400); // 400ms delay
+            });
+
+            var yearLinks = document.querySelectorAll('.year-nav a');
+            yearLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var href = this.getAttribute('href');
+                    this.style.color = '#31D53F';
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 400); // 400ms delay
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        <a class="back-button" href="#">&lt;&lt; back</a>
         
         <h1>My Milestones</h1>
         
         <div class="year-nav">
             <a href="#2024">2024</a>
+            <!-- Add more years as needed -->
         </div>
 
         <div class="timeline">
@@ -131,6 +156,7 @@
                     <p>Embarked on my Machine Learning journey, diving into the essential Mathematics behind it.</p>
                 </div>
             </div>
+            <!-- Add more milestones here -->
         </div>
     </div>
 </body>
