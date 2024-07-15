@@ -62,10 +62,33 @@
             color: #31D53F;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.contact-list a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var href = this.getAttribute('href');
+                    this.style.color = '#31D53F';
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 300); // 300ms delay
+                });
+            });
+            var backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.style.color = '#31D53F';
+                setTimeout(function() {
+                    history.back();
+                }, 300); // 300ms delay
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        <a class="back-button" href="#">&lt;&lt; back</a>
         <h1>Reach Out</h1>
         <ul class="contact-list">
             <li><a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
