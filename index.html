@@ -28,16 +28,21 @@
             text-align: center;
             font-size: 18px;
         }
-        nav a {
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .nav-links a {
             margin: 0 10px;
             text-decoration: none;
             color: #0D50FF;
-            transition: color 0.4s, text-decoration 0.4s, transform 0.4s;
+            transition: color 0.5s;
         }
-        nav a:hover {
+        .nav-links a:active {
             color: #31D53F;
-            text-decoration: underline;
-            transform: scale(1.05);
+            transition: color 0.5s;
         }
         .sliding-text-container {
             width: 100%;
@@ -55,43 +60,37 @@
         }
         .sliding-text a {
             color: #0D50FF;
-            text-decoration: none;
-            transition: all 0.4s ease;
+            text-decoration: underline;
+            transition: color 0.5s;
         }
         .sliding-text a:hover {
-            text-decoration: underline;
             color: #31D53F;
+            transition: color 0.5s;
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('nav a');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 400);
-                });
-            });
-        });
+        function delayNavigation(url) {
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500);
+        }
     </script>
 </head>
 <body>
     <h1>Je suis Soham</h1>
     <nav aria-label="Main Navigation">
         <div class="nav-links">
-            <a href="about.html">Bio</a> |
-            <a href="projects.html">Showcase</a>
+            <a href="about.html" onclick="delayNavigation('about.html'); return false;">Bio</a> |
+            <a href="projects.html" onclick="delayNavigation('projects.html'); return false;">Showcase</a>
         </div>
         <div class="nav-links">
-            <a href="contact.html">Reach Out</a> |
-            <a href="updates.html">Updates & Milestones</a>
+            <a href="contact.html" onclick="delayNavigation('contact.html'); return false;">Reach Out</a> |
+            <a href="updates.html" onclick="delayNavigation('updates.html'); return false;">Updates & Milestones</a>
         </div>
     </nav>
     <div class="sliding-text-container">
         <div class="sliding-text">
-            <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank">x.com/Twitter</a> for the earliest updates.</span>
+            <span>Follow on <a href="#" onclick="delayNavigation('https://x.com/sohamvjadhav'); return false;">x.com/Twitter</a> for the earliest updates.</span>
         </div>
     </div>
 </body>
