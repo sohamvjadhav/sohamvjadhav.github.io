@@ -70,7 +70,8 @@
         }
     </style>
     <script>
-        function delayNavigation(url) {
+        function delayNavigation(url, element) {
+            element.style.color = '#31D53F';
             setTimeout(function() {
                 window.location.href = url;
             }, 500);
@@ -81,17 +82,17 @@
     <h1>Je suis Soham</h1>
     <nav aria-label="Main Navigation">
         <div class="nav-links">
-            <a href="about.html" onclick="delayNavigation('about.html'); return false;">Bio</a> |
-            <a href="projects.html" onclick="delayNavigation('projects.html'); return false;">Showcase</a>
+            <a href="about.html" onclick="delayNavigation('about.html', this); return false;">Bio</a> |
+            <a href="projects.html" onclick="delayNavigation('projects.html', this); return false;">Showcase</a>
         </div>
         <div class="nav-links">
-            <a href="contact.html" onclick="delayNavigation('contact.html'); return false;">Reach Out</a> |
-            <a href="updates.html" onclick="delayNavigation('updates.html'); return false;">Updates & Milestones</a>
+            <a href="contact.html" onclick="delayNavigation('contact.html', this); return false;">Reach Out</a> |
+            <a href="updates.html" onclick="delayNavigation('updates.html', this); return false;">Updates & Milestones</a>
         </div>
     </nav>
     <div class="sliding-text-container">
         <div class="sliding-text">
-            <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank">x.com/Twitter</a> for the earliest updates.</span>
+            <span>Follow on <a href="https://x.com/sohamvjadhav" target="_blank" onclick="delayNavigation('https://x.com/sohamvjadhav', this); return false;">x.com/Twitter</a> for the earliest updates.</span>
         </div>
     </div>
 </body>
