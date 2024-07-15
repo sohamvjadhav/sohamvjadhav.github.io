@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with me through various platforms.">
-    <title>Contact Me</title>
+    <meta name="description" content="Get in touch with Soham through various platforms.">
+    <title>Contact Soham</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        
         body {
             font-family: 'Fira Code', monospace;
             background-color: #f0f0f0;
@@ -35,67 +36,69 @@
             color: #0D50FF;
             cursor: pointer;
             font-weight: normal;
+            transition: color 0.4s;
         }
         .back-button:hover,
-        .back-button:active {
+        .back-button:focus {
             color: #31D53F;
-            text-decoration: none;
         }
-        .contact-links {
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-list li {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
         }
-        .contact-links a {
+        .contact-list li a {
+            margin-left: 10px;
             color: #0D50FF;
             text-decoration: none;
             transition: color 0.4s;
         }
-        .contact-links a:hover,
-        .contact-links a:active {
+        .contact-list li a:hover,
+        .contact-list li a:focus {
             color: #31D53F;
         }
-        .contact-links i {
-            font-size: 36px;
+        .contact-list li a:visited {
+            color: #31D53F;
+        }
+        .contact-list li i {
+            font-size: 24px;
+            color: #0D50FF;
+            transition: color 0.4s;
+        }
+        .contact-list li i:hover,
+        .contact-list li i:focus {
+            color: #31D53F;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var backButton = document.querySelector('.back-button');
-            backButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                this.style.color = '#31D53F';
-                setTimeout(function() {
-                    history.back();
-                }, 400); // 400ms delay
-            });
-
-            var links = document.querySelectorAll('.contact-links a');
-            links.forEach(function(link) {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var href = this.getAttribute('href');
-                    this.style.color = '#31D53F';
-                    setTimeout(function() {
-                        window.location.href = href;
-                    }, 400); // 400ms delay
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="container">
-        <a class="back-button" href="#">&lt;&lt; back</a>
+        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
         
-        <h1>Reach Out</h1>
+        <h1>Contact Soham</h1>
         
-        <div class="contact-links">
-            <a href="mailto:soham@example.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/soham" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/soham" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/soham" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
+        <ul class="contact-list">
+            <li>
+                <i class="fab fa-twitter"></i>
+                <a href="https://x.com/sohamvjadhav" target="_blank">Twitter</a>
+            </li>
+            <li>
+                <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/sohamvjadhav" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:jadhavsoham@icloud.com">Email</a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
