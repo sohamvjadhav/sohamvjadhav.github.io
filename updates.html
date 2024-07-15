@@ -33,10 +33,12 @@
             text-decoration: none;
             color: #0D50FF;
             cursor: pointer;
-            font-weight: normal; /* Changed to normal */
+            font-weight: normal;
         }
-        .back-button:hover {
-            text-decoration: underline;
+        .back-button:hover,
+        .back-button:active {
+            text-decoration: none;
+            color: #31D53F;
         }
         .timeline {
             position: relative;
@@ -92,10 +94,12 @@
             margin: 0 10px;
             text-decoration: none;
             color: #0D50FF;
-            font-weight: normal; /* Changed to normal */
+            font-weight: normal;
         }
-        .year-nav a:hover {
-            text-decoration: underline;
+        .year-nav a:hover,
+        .year-nav a:active {
+            text-decoration: none;
+            color: #31D53F;
         }
     </style>
 </head>
@@ -107,7 +111,6 @@
         
         <div class="year-nav">
             <a href="#2024">2024</a>
-            <!-- Add more years as needed -->
         </div>
 
         <div class="timeline">
@@ -128,7 +131,6 @@
                     <p>Embarked on my Machine Learning journey, diving into the essential Mathematics behind it.</p>
                 </div>
             </div>
-            <!-- Add more milestones here -->
         </div>
     </div>
 </body>
