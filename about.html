@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Soham Jadhav, an interdisciplinary explorer with a keen interest in tech and ML.">
+    <meta name="description" content="Learn more about me and my interests.">
     <title>About Me</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
@@ -37,46 +37,42 @@
         }
         .back-button:hover,
         .back-button:active {
-            text-decoration: none;
             color: #31D53F;
-        }
-        .content {
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
         }
         ul {
-            padding-left: 20px;
+            list-style-type: none;
+            padding: 0;
         }
         li {
             margin-bottom: 10px;
         }
-        li:hover,
-        li:active {
-            color: #31D53F;
-        }
-        h1:hover,
-        h1:active {
-            color: #31D53F;
-        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.style.color = '#31D53F';
+                setTimeout(function() {
+                    history.back();
+                }, 400); // 400ms delay
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        <a class="back-button" href="#">&lt;&lt; back</a>
         
-        <h1>About Me</h1>
+        <h1>Bio</h1>
         
-        <div class="content">
-            <ul>
-                <li>I'm Soham Jadhav, a 20-year-old interdisciplinary explorer with a keen interest in tech and Machine Learning.</li>
-                <li>I love diving deep into complex problems and finding innovative solutions.</li>
-                <li>My journey is driven by curiosity and a passion for learning.</li>
-                <li>Besides technology, I enjoy exploring various fields and continuously expanding my knowledge base.</li>
-                <li>Whether it's through reading, hands-on projects, or engaging with the community, I'm always eager to learn and grow.</li>
-            </ul>
-        </div>
+        <ul>
+            <li>I'm Soham Jadhav.</li>
+            <li>I'm 20 years old.</li>
+            <li>I'm an interdisciplinary explorer.</li>
+            <li>I have a keen interest in tech and Machine Learning.</li>
+        </ul>
     </div>
 </body>
 </html>
