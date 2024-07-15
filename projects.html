@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Showcase of Soham's projects.">
-    <title>Showcase</title>
+    <meta name="description" content="Discover the projects and works of Soham Jadhav.">
+    <title>Projects</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
         body {
@@ -35,14 +35,25 @@
             cursor: pointer;
             font-weight: normal;
         }
-        .back-button:hover {
-            text-decoration: underline;
+        .back-button:hover,
+        .back-button:active {
+            text-decoration: none;
+            color: #31D53F;
         }
         .content {
             padding: 30px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .content p:hover,
+        .content p:active {
+            color: #31D53F;
+        }
+        h1:hover,
+        h1:active {
+            color: #31D53F;
         }
     </style>
 </head>
@@ -50,11 +61,11 @@
     <div class="container">
         <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
         
-        <h1>Showcase</h1>
+        <h1>Projects</h1>
         
         <div class="content">
-            <p>This page will soon feature my latest projects and achievements. Stay tuned!</p>
+            <p>No projects to display at the moment. Stay tuned for updates!</p>
         </div>
     </div>
 </body>
-</html>]
+</html>
