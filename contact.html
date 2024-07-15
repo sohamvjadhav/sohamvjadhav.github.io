@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reach out to Soham via email or social media.">
-    <title>Reach Out</title>
+    <meta name="description" content="Get in touch with Soham Jadhav.">
+    <title>Contact</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
         body {
@@ -35,8 +35,10 @@
             cursor: pointer;
             font-weight: normal;
         }
-        .back-button:hover {
-            text-decoration: underline;
+        .back-button:hover,
+        .back-button:active {
+            text-decoration: none;
+            color: #31D53F;
         }
         .content {
             padding: 30px;
@@ -44,19 +46,21 @@
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
-        .contact-info {
-            list-style-type: none;
-            padding: 0;
+        p {
+            margin-bottom: 20px;
         }
-        .contact-info li {
-            margin-bottom: 10px;
-        }
-        .contact-info a {
+        a {
             color: #0D50FF;
             text-decoration: none;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        a:hover,
+        a:active {
+            color: #31D53F;
+            text-decoration: none;
+        }
+        h1:hover,
+        h1:active {
+            color: #31D53F;
         }
     </style>
 </head>
@@ -64,14 +68,13 @@
     <div class="container">
         <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
         
-        <h1>Reach Out</h1>
+        <h1>Contact Me</h1>
         
         <div class="content">
-            <ul class="contact-info">
-                <li><a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></li>
-                <li><a href="https://x.com/sohamvjadhav" target="_blank">Twitter</a></li>
-                <li><a href="mailto:jadhavsoham@icloud.com">jadhavsoham@icloud.com</a></li>
-            </ul>
+            <p>If you'd like to get in touch, feel free to reach out to me via the following channels:</p>
+            <p>Email: <a href="mailto:soham@example.com">soham@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/sohamvjadhav" target="_blank">linkedin.com/in/sohamvjadhav</a></p>
+            <p>Twitter: <a href="https://twitter.com/sohamvjadhav" target="_blank">@sohamvjadhav</a></p>
         </div>
     </div>
 </body>
