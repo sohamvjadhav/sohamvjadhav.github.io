@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Soham Jadhav.">
-    <title>Contact</title>
+    <meta name="description" content="Get in touch with me through various platforms.">
+    <title>Contact Me</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
         body {
             font-family: 'Fira Code', monospace;
             background-color: #f0f0f0;
@@ -40,26 +41,24 @@
             text-decoration: none;
             color: #31D53F;
         }
-        .content {
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        p {
-            margin-bottom: 20px;
+        .contact-list li {
+            display: inline;
         }
-        a {
+        .contact-list a {
+            text-decoration: none;
             color: #0D50FF;
-            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
         }
-        a:hover,
-        a:active {
-            color: #31D53F;
-            text-decoration: none;
-        }
-        h1:hover,
-        h1:active {
+        .contact-list a:hover,
+        .contact-list a:active {
             color: #31D53F;
         }
     </style>
@@ -67,15 +66,12 @@
 <body>
     <div class="container">
         <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
-        
-        <h1>Contact Me</h1>
-        
-        <div class="content">
-            <p>If you'd like to get in touch, feel free to reach out to me via the following channels:</p>
-            <p>Email: <a href="mailto:soham@example.com">soham@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/sohamvjadhav" target="_blank">linkedin.com/in/sohamvjadhav</a></p>
-            <p>Twitter: <a href="https://twitter.com/sohamvjadhav" target="_blank">@sohamvjadhav</a></p>
-        </div>
+        <h1>Reach Out</h1>
+        <ul class="contact-list">
+            <li><a href="https://www.instagram.com/sohamvjadhav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com/sohamvjadhav" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="mailto:jadhavsoham@icloud.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
     </div>
 </body>
 </html>
