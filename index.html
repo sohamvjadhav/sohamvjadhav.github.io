@@ -42,6 +42,7 @@
         .nav-links a:hover,
         .nav-links a:active {
             color: #31D53F;
+            text-decoration: none;
         }
         .sliding-text-container {
             width: 100%;
@@ -62,11 +63,25 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        .sliding-text a:hover,
-        .sliding-text a:active {
+        .sliding-text a:hover {
             color: #31D53F;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var href = this.getAttribute('href');
+                    this.style.color = '#31D53F';
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 400); // 400ms delay
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Je suis Soham</h1>
