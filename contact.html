@@ -63,8 +63,7 @@
             align-items: center;
         }
         .contact-list li a:hover,
-        .contact-list li a:focus,
-        .contact-list li a:visited {
+        .contact-list li a:focus {
             color: #31D53F;
         }
         .contact-list li i {
@@ -75,10 +74,34 @@
             margin-left: 10px;
         }
     </style>
+    <script>
+        function delayNavigation(url, element) {
+            element.style.color = '#31D53F';
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // 500ms delay
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                delayNavigation('javascript:history.back()', backButton);
+            });
+
+            var links = document.querySelectorAll('a:not(.back-button)');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    delayNavigation(link.href, link);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <a class="back-button" onclick="history.back()">&lt;&lt; back</a>
+        <a class="back-button" href="#">&lt;&lt; back</a>
         
         <h1>Contact Me</h1>
         
