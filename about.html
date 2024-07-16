@@ -9,26 +9,29 @@
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
         body {
             font-family: 'Fira Code', monospace;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             margin: 0;
             padding: 20px;
             color: #333;
             line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
         h1 {
-            text-align: center;
             color: #0D50FF;
             font-size: 32px;
             margin-bottom: 30px;
         }
         .back-button {
             display: block;
-            text-align: center;
             margin-bottom: 20px;
             text-decoration: none;
             color: #0D50FF;
@@ -49,14 +52,26 @@
         }
     </style>
     <script>
+        function delayNavigation(url, element) {
+            element.style.color = '#31D53F';
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // 500ms delay
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             var backButton = document.querySelector('.back-button');
             backButton.addEventListener('click', function(event) {
                 event.preventDefault();
-                this.style.color = '#31D53F';
-                setTimeout(function() {
-                    history.back();
-                }, 400); // 400ms delay
+                delayNavigation('javascript:history.back()', backButton);
+            });
+
+            var links = document.querySelectorAll('a:not(.back-button)');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    delayNavigation(link.href, link);
+                });
             });
         });
     </script>
