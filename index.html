@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Jadhav</title>
+    <style>
+        /* Define the custom fonts */
+        @font-face {
+            font-family: 'Glacial Indifference';
+            src: url('GlacialIndifference-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Glacial Indifference';
+            src: url('GlacialIndifference-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Glacial Indifference';
+            src: url('GlacialIndifference-Italic.otf') format('opentype');
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        body {
+            font-family: 'Glacial Indifference', Arial, sans-serif;
+            background-color: #ffffff; /* Pure white background */
+            color: rgba(88, 95, 110, 1); /* Text color */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: left;
+            padding: 20px;
+            background-color: #ffffff; /* Pure white background */
+            border-bottom: none; /* Remove partition line */
+        }
+        img.profile-pic {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 0; /* Squarish edges */
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            padding: 20px;
+            background-color: #ffffff; /* Pure white background */
+            text-align: left;
+            border-bottom: none; /* Remove partition line */
+        }
+        h1, h2 {
+            color: #000; /* Black color for headers */
+        }
+        h1 {
+            font-weight: 700; /* Bold for headings */
+        }
+        h2 {
+            font-weight: 500; /* Medium weight for sub-headings */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            color: rgba(88, 95, 110, 1); /* Updated text color */
+            display: flex;
+            align-items: center;
+        }
+        ul li .icon {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        ul li a {
+            color: rgba(231, 120, 67, 1); /* Updated link color */
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        p {
+            font-weight: 400; /* Regular weight for body text */
+            color: rgba(88, 95, 110, 1); /* Updated text color */
+        }
+        .icon {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .icon svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2;
+            stroke: rgba(88, 95, 110, 1);
+            fill: none;
+        }
+        /* Specific styles for contact section links */
+        #contact a {
+            color: rgba(231, 120, 67, 1); /* Updated link color */
+            text-decoration: none; /* No underline by default */
+        }
+        #contact a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+    <script>
+        // Function to update the time dynamically
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('time').textContent = timeString;
+        }
+        // Update the time every minute
+        setInterval(updateTime, 60000);
+        window.onload = updateTime; // Initial time set
+    </script>
+    <!-- Feather Icons Script -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+<header>
+    <h1>Soham Jadhav</h1>
+    <p id="time">Loading time...</p>
+    <img src="90977 copy.jpg" alt="Soham Jadhav" class="profile-pic">
+</header>
+
+<section id="summary">
+    <h2>Summary</h2>
+    <ul>
+        <li><span class="icon" data-feather="book"></span>20-year-old interdisciplinary explorer with a keen interest in technology, AI, and machine learning</li>
+        <li><span class="icon" data-feather="brain"></span>Engaged in learning Python, probability, statistics, and machine learning to become an ML and AI expert</li>
+        <li><span class="icon" data-feather="layers"></span>Enjoys integrating art, design, science, technology, and finance into personal and professional projects</li>
+        <li><span class="icon" data-feather="code"></span>Learning new technologies with a focus on retro designs, infrastructure, and habit visualization</li>
+        <li><span class="icon" data-feather="trending-up"></span>Currently tracking body transformation progress with Notion and exploring innovative methods for self-improvement</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><span class="icon" data-feather="target"></span><a href="#">Python and Machine Learning 100-Day Journey</a>: A focused plan to master Python and ML from basics to advanced</li>
+        <li><span class="icon" data-feather="globe"></span><a href="#">Portfolio Website</a>: A personal portfolio showcasing interdisciplinary projects in art, design, technology, and more</li>
+        <li><span class="icon" data-feather="calendar"></span><a href="#">Habit Tracker Visualization</a>: A project to visualize personal habits like the GitHub contribution graph</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Connect</h2>
+    <li>Click to redirect</li>
+    <p><span class="icon" data-feather="twitter"></span>Twitter: <a href="https://twitter.com/sohamvjadhav" target="_blank">@sohamvjadhav</a></p>
+    <p><span class="icon" data-feather="mail"></span>Email: <a href="mailto:jadhavsoham@icloud.com">jadhavsoham@icloud.com</a></p>
+</section>
+
+<section id="writing">
+    <h2>Writing</h2>
+    <ul>
+        <li><span class="icon" data-feather="edit-2"></span><a href="#">Reflections on E-commerce and Quick Commerce</a>: Insights and takeaways from a recent blog by @ybhrdwj</li>
+        <li><span class="icon" data-feather="repeat"></span><a href="#">Exploring Retro Design Trends</a>: Incorporating vintage aesthetics into modern projects</li>
+        <li><span class="icon" data-feather="book-open"></span><a href="#">The Journey of Self-Learning</a>: A personal account of learning machine learning and AI</li>
+    </ul>
+</section>
+
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+</script>
+
+</body>
+</html>
