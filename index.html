@@ -58,9 +58,11 @@
         }
         h1 {
             font-weight: 700; /* Bold for headings */
+            font-size: 2rem; /* Responsive font size */
         }
         h2 {
             font-weight: 500; /* Medium weight for sub-headings */
+            font-size: 1.5rem; /* Responsive font size */
         }
         ul {
             list-style: none;
@@ -105,6 +107,40 @@
         }
         #contact a:hover {
             text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header, section {
+                padding: 15px;
+            }
+            img.profile-pic {
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 1.75rem; /* Slightly smaller font size on medium screens */
+            }
+            h2 {
+                font-size: 1.25rem; /* Slightly smaller font size on medium screens */
+            }
+            ul li {
+                font-size: 0.9rem; /* Slightly smaller font size on medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, section {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5rem; /* Smaller font size on small screens */
+            }
+            h2 {
+                font-size: 1rem; /* Smaller font size on small screens */
+            }
+            ul li {
+                font-size: 0.8rem; /* Smaller font size on small screens */
+            }
         }
     </style>
     <script>
