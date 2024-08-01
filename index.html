@@ -50,10 +50,19 @@
             padding: 20px;
             background-color: #ffffff; /* Pure white background */
             border-bottom: none; /* Remove partition line */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .favicon {
+            width: 80px;
+            height: 80px;
         }
         .title {
             font-size: 2rem; /* Smaller title size */
             line-height: 1.2; /* Adjust line height */
+            display: inline-block;
+            margin-left: 10px;
         }
         .title strong {
             font-weight: 700; /* Bold for "Soham Jadhav's" */
@@ -156,11 +165,12 @@
 <body>
 
 <header>
+    <img src="favicon.png" alt="Favicon" class="favicon">
     <h1 class="title"><strong>Soham Jadhav's</strong> <span>Page</span></h1>
     <p id="time">Loading time...</p>
-    <img src="cover_photo.jpeg" alt="Soham Jadhav" class="profile-pic">
 </header>
 
+<img src="90977 copy.jpg" alt="Soham Jadhav" class="profile-pic">
 <section id="summary">
     <h2>Summary</h2>
     <ul>
