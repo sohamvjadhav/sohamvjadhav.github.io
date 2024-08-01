@@ -9,12 +9,12 @@
     <meta name="author" content="Soham Jadhav">
     <meta property="og:title" content="Soham Jadhav's Portfolio">
     <meta property="og:description" content="Explore projects and writings by Soham Jadhav.">
-    <meta property="og:image" content="/mnt/data/cover_photo.jpeg"> <!-- Replace with the actual path to your cover photo -->
+    <meta property="og:image" content="cover_photo.png"> <!-- Replace with the actual path to your cover photo -->
     <meta property="og:url" content="https://sohamvjadhav.github.io"> <!-- Replace with your website's URL -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Soham Jadhav's Portfolio">
     <meta name="twitter:description" content="Explore projects and writings by Soham Jadhav.">
-    <meta name="twitter:image" content="/mnt/data/cover_photo.jpeg"> <!-- Replace with the actual path to your cover photo -->
+    <meta name="twitter:image" content="cover_photo.png"> <!-- Replace with the actual path to your cover photo -->
     <link rel="icon" href="favicon.png"> <!-- Replace with the path to your favicon -->
     <style>
         /* Define the custom fonts */
@@ -51,16 +51,17 @@
             background-color: #ffffff; /* Pure white background */
             border-bottom: none; /* Remove partition line */
         }
-        h1 {
-            font-family: 'Glacial Indifference', Arial, sans-serif;
-            font-weight: 700;
-            font-size: 36px;
-            color: #f58e42;
-            display: inline;
+        .title {
+            font-size: 2rem; /* Smaller title size */
+            line-height: 1.2; /* Adjust line height */
         }
-        h1 span {
-            font-weight: 400;
-            color: #3c3c3c;
+        .title strong {
+            font-weight: 700; /* Bold for "Soham Jadhav's" */
+            color: rgba(231, 120, 67, 1);
+        }
+        .title span {
+            font-weight: 300; /* Thin for "Page" */
+            color: rgba(88, 95, 110, 1);
         }
         img.profile-pic {
             width: 100%;
@@ -76,8 +77,13 @@
             text-align: left;
             border-bottom: none; /* Remove partition line */
         }
-        h2 {
+        h1, h2 {
             color: #000; /* Black color for headers */
+        }
+        h1 {
+            font-weight: 700; /* Bold for headings */
+        }
+        h2 {
             font-weight: 500; /* Medium weight for sub-headings */
         }
         ul {
@@ -150,9 +156,9 @@
 <body>
 
 <header>
-    <h1>Soham Jadhav<span>'s Page</span></h1>
+    <h1 class="title"><strong>Soham Jadhav's</strong> <span>Page</span></h1>
     <p id="time">Loading time...</p>
-    <img src="90977 copy.jpg" alt="Soham Jadhav" class="profile-pic">
+    <img src="cover_photo.jpeg" alt="Soham Jadhav" class="profile-pic">
 </header>
 
 <section id="summary">
