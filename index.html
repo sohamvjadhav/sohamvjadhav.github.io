@@ -150,11 +150,23 @@
         #contact a:hover {
             text-decoration: underline; /* Underline on hover */
         }
-        footer{
-            text-align: left;
-            color: rgba(191, 191, 191, 1)
-            padding: 20px;
-            background-color: #fff;
+        footer {
+           text-align: left;
+           padding: 20px;
+           background-color: #ffffff; /* Pure white background */
+           border-top: 1px solid rgba(191, 191, 191, 1); /* 1 px top border with specified color */
+           color: rgba(191, 191, 191, 1); /* Text color */
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 10px;
+           opacity: 1; /* Ensure text is fully opaque */
+        }
+
+        footer p {
+           margin: 0; /* Remove margin for proper alignment */
+           padding: 0; /* Remove padding for proper alignment */
+           line-height: 1.6; /* Adjust line height */
         }
     </style>
     <script>
@@ -202,9 +214,9 @@
     <h2>Projects</h2>
     <ul>
         <li> Click to redirect </li>
-        <li><span class="icon" data-feather="target"></span><a href="#">Python and Machine Learning 100-Day Journey</a><br>A focused plan to master Python and ML from basics to advanced.</li>
-        <li><span class="icon" data-feather="globe"></span><a href="#">Portfolio Website</a><br>A personal portfolio showcasing interdisciplinary projects in art, design, technology, and more.</li>
-        <li><span class="icon" data-feather="calendar"></span><a href="#">Habit Tracker Visualization</a><br>A project to visualize personal habits like the GitHub contribution graph.</li>
+        <li><span class="icon" data-feather="target"></span><a href="#">Python and Machine Learning 100-Day Journey</a><br>A focused plan to master Python and ML from basics to advanced.</li> <br>
+        <li><span class="icon" data-feather="globe"></span><a href="#">Portfolio Website</a><br>A personal portfolio showcasing interdisciplinary projects in art, design, technology, and more.</li> <br>
+        <li><span class="icon" data-feather="calendar"></span><a href="#">Habit Tracker Visualization</a><br>A project to visualize personal habits like the GitHub contribution graph.</li> <br>
     </ul>
 </section>
 
@@ -222,15 +234,17 @@
     <h2>Writing</h2>
     <ul>
         <li> Click to redirect </li>
-        <li><span class="icon" data-feather="edit-2"></span><a href="#">How to boost the per Capita Income of Indian Farmers</a><br>Insights and ideas for boost the Income of Indian Farmers.</li>
-        <li><span class="icon" data-feather="repeat"></span><a href="#">Exploring Retro Design Trends</a><br>Incorporating vintage aesthetics into modern projects.</li>
-        <li><span class="icon" data-feather="book-open"></span><a href="#">The Journey of Self-Learning</a><br>A personal account of learning machine learning and AI.</li>
+        <li><span class="icon" data-feather="edit-2"></span><a href="#">How to boost the per Capita Income of Indian Farmers</a><br>Insights and ideas for boost the Income of Indian Farmers.</li> <br>
+        <li><span class="icon" data-feather="repeat"></span><a href="#">Exploring Retro Design Trends</a><br>Incorporating vintage aesthetics into modern projects.</li> <br>
+        <li><span class="icon" data-feather="book-open"></span><a href="#">The Journey of Self-Learning</a><br>A personal account of learning machine learning and AI.</li> <br>
         <li>Stay tuned for the releases!</li>
     </ul>
 </section>
+
 <section id="footer">
-<li>In creation of this website open source font API, Icon API, resources from Freepik were used <br> We give due appreciation to them. </li>
-</section> 
+    <p>In the creation of this website, open source font API, Icon API, and resources from Freepik were used.<br>We give due appreciation to them.</p>
+</section>
+
 <script>
     // Initialize Feather Icons
     feather.replace();
