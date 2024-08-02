@@ -37,20 +37,18 @@
             font-style: italic;
         }
 
-        /* Slide-in animation */
-        @keyframes slideIn {
+       
+        @keyframes simpleFadeIn {
         from {
-           transform: translateX(-100%);
-           opacity: 0;
+           opacity: 0.1;
         }
         to {
-           transform: translateX(0);
            opacity: 1;
-          }
-       }
+        }
+        }
 
-            body {
-            animation: slideIn 1s ease-in-out;
+        body { 
+            animation: simpleFadeIn 0.7s ease-in-out;
             font-family: 'Glacial Indifference', Arial, sans-serif;
             background-color: #ffffff; /* Pure white background */
             color: rgba(88, 95, 110, 1); /* Text color */
