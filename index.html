@@ -37,16 +37,17 @@
             font-style: italic;
         }
 
-       
-            /* Fade-in animation */
-        @keyframes fadeIn {
+        /* Slide-in animation */
+        @keyframes slideIn {
         from {
-            opacity: 0.1;
+           transform: translateX(-100%);
+           opacity: 0;
         }
         to {
-        opacity: 1;
-        }
-        }
+           transform: translateX(0);
+           opacity: 1;
+          }
+       }
 
             body {
             animation: fadeIn 0.5s ease-in-out;
